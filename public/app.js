@@ -28,9 +28,14 @@ angular.module("stock", ["ui.router", "nvd3"])
       url: "/stocks/:stockId",
       templateUrl: "./views/profileStock.html",
       controller: 'profileStockCtrl'
-    });
+    })
     // .state("profile.pref", {
     //   url: "/pref",
     //   templateUrl: "./views/pref.html"
     // });
+    .state("profile.calendar",  {
+      url: "/calendar",
+      templateUrl: "./calendar/public/calendar.component.html",
+      controller: "calendarCtrl"
+    });
   });

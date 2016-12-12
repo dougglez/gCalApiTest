@@ -9,6 +9,9 @@ var nytCtrl = require("./controller/nytCtrl.js");
 var config = require('./config.js');
 var passport = require('passport');
 var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
+var calendarCtrl = require('./controller/calendar.controller.js');
+// var gcal = require('google-calendar');
+// var google_calendar = new gcal.GoogleCalendar(accessToken);
 
 var morgan = require('morgan');
 
@@ -83,6 +86,9 @@ app.get("/user/getsavedstocks/:id", stockCtrl.getSavedStocks);
 
 app.get("/getgraphdata/:stockId/:start/:end", yahooCtrl.getStocks);
 
+app.put("/user/createEvent", calendarCtrl.createEvent);
+// app.get
+
 app.post("/snapshots", yahooCtrl.savedStocksSnapshot);
 app.post("/addnewfavorite", stockCtrl.addNewFavorite);
 app.post("/stocknews", nytCtrl.getNews);
@@ -96,7 +102,7 @@ app.get('/logout', function(req, res) {
 //   request.  The first step in Google authentication will involve
 //   redirecting the user to google.com.  After authorization, Google
 //   will redirect the user back to this application at /auth/google/callback
-app.get('/auth/google', passport.authenticate('google', {scope: ['https://www.googleapis.com/auth/plus.login']}));
+app.get('/auth/google', passport.authenticate('google', {scope: ['https://www.googleapis.com/auth/plus.login', 'https://www.googleapis.com/auth/calendar']}));
 
 // GET /auth/google/callback
 //   Use passport.authenticate() as route middleware to authenticate the

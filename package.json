@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Get-Schwifty-DvMtn/stock-x.git"
+    "url": "git+https://github.com/dougglez/gCalApiTest.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Get-Schwifty-DvMtn/stock-x/issues"
+    "url": "https://github.com/dougglez/gCalApiTest/issues"
   },
-  "homepage": "https://github.com/Get-Schwifty-DvMtn/stock-x#readme",
+  "homepage": "https://github.com/dougglez/gCalApiTest#readme",
   "dependencies": {
     "angular-nvd3": "^1.0.9",
     "axios": "^0.15.2",
