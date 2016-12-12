@@ -1,0 +1,33 @@
+<div animation class="header">
+  <div class="header-container">
+    <div class="navicon">
+        <div class="toggle">
+            <span class="t1"></span>
+            <span class="t2"></span>
+            <span class="t3"></span>
+        </div>
+    </div>
+    <div class="header-logo-section">
+      <img class = "logo-svg" src="./styles/images/logo.svg" alt="" />
+    </div>
+
+    <div class="signInContainer">
+      <div ng-show="loggedIn" class="profile-container">
+          <!-- <div class="image-profile-wrapper">
+              <img style="width: 50px; height: auto;border-radius: 50px;" class="user-profile-pic" ng-src="{{userPic}}" alt=""/>
+          </div> -->
+          <div class="greeting-profile-wrapper">
+              <p>Hello, {{firstName}}</p>
+          </div>
+
+      </div>
+        <a ng-show="loggedIn" ng-click="signOut()" class="btn btn-block btn-google">
+            <span class="fa"></span>
+            Sign Out</a>
+        <a ng-show="!loggedIn" href="/auth/google" class="loginBtn btn btn-block btn-social btn-google">
+            <i class="fa fa-google"></i>
+            Sign In with Google
+        </a>
+    </div>
+  </div>
+</div>

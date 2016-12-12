@@ -1,0 +1,226 @@
+.stockHeader {
+  color: $orange;
+  font-size: 40px;
+}
+.chartDropdown {
+  color: $textColor
+}
+.chartDropdown:hover {
+  color: darken($textColor, 10%);
+}
+.graph-header-container{
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    .graph-header-company-name{
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .graph-button-container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+        .graph-type-buttons{
+          padding-left: 15px;
+
+
+        } //ends graph-type-buttons
+        .graph-range-buttons{
+          padding-right: 15px;
+          padding-bottom: 4px;
+          align-self: center;
+
+          .graph-range-button{
+            background: none;
+            border: none;
+            color: $textColor;
+          }
+          .graph-range-button:hover {
+            color: darken($textColor, 10%);
+          }
+          .graph-range-button:focus {
+            outline-color: $textColor;
+          }
+        }
+        // ends graph-range-buttons
+    } // ends graph-button-container
+} //ends graph-header-container
+
+
+// svg {
+//     margin-bottom: 105px;
+// }
+.nvd3 .nv-axis {
+    fill: $orange;
+}
+line {
+    stroke: black !important;
+}
+.graph-container {
+    height: 450px;
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 105px;
+}
+.news-column-headers {
+    display: flex;
+    justify-content: space-around;
+}
+.column-header {
+    font-family: $menuFont;
+    font-size: 16px;
+    color: $offWhite;
+}
+
+.stockchart-nav-dropdown {
+    font-size: 1.25em;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+
+.stockchart-nav-dropdown ul {
+    margin-left: 0;
+    padding-left: 0;
+    width: 200px;
+    list-style: none;
+    position: relative;
+    display: inline-table;
+}
+
+.stockchart-nav-dropdown ul ul {
+    display: none;
+}
+
+.stockchart-nav-dropdown ul li:hover>ul {
+    display: block;
+}
+
+.stockchart-nav-dropdown ul li {
+    float: left;
+    width: 200px;
+    text-align: left;
+    border-bottom: 2px solid $textColor;
+}
+
+.stockchart-nav-dropdown ul li:hover {
+    background: #f2f2f2;
+}
+
+.stockchart-nav-dropdown ul li a {
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    background-color: #282424;
+    text-decoration: none;
+}
+
+.stockchart-nav-dropdown ul ul {
+    border-radius: 0px;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+}
+
+.stockchart-nav-dropdown ul ul li {
+    float: none;
+    border-bottom: 2px solid #eaeaea;
+    position: relative;
+}
+
+.stockchart-nav-dropdown ul ul li a {
+    padding: 15px 10px;
+    color: #838383;
+}
+
+.stockchart-nav-dropdown ul ul li a:hover {
+    background: $textColor;
+    color: #fff;
+}
+
+#down-triangle {
+    float: right;
+    width: 0;
+    height: 0;
+    margin-top: 10px;
+    border-top: 10px solid $textColor;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+
+.circle {
+    float: right;
+    display: inline;
+    width: 10px;
+    height: 10px;
+    margin-top: 5px;
+    border: 3px solid $textColor;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+}
+.newsTitle {
+  color: darken($offWhite, 0%);
+}
+.sign-in-stocks {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf));
+	background:-moz-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+	background:-webkit-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+	background:-o-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+	background:-ms-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+	background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf',GradientType=0);
+	background-color:#ededed;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#777777;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+.sign-in-stocks:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed));
+	background:-moz-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background:-webkit-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background:-o-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background:-ms-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed',GradientType=0);
+	background-color:#dfdfdf;
+}
+.sign-in-stocks:active {
+	position:relative;
+	top:1px;
+}
+.table tbody tr td a {
+  color: $orange;
+}
+.table tbody tr td a:hover {
+  color: darken($orange, 10%);
+}
+.table tbody tr td a:focus {
+  text-decoration: none;
+}
+.table tbody tr td a:active {
+  text-decoration: none;
+}
+tbody tr:nth-child(odd):hover {
+    background-color: darken(#404040, 5%);
+}
+tbody tr:nth-child(even):hover {
+    background-color: lighten(#272424, 5%);
+}
