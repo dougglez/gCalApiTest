@@ -86,8 +86,10 @@ app.get("/user/getsavedstocks/:id", stockCtrl.getSavedStocks);
 
 app.get("/getgraphdata/:stockId/:start/:end", yahooCtrl.getStocks);
 
-app.put("/user/createEvent", calendarCtrl.createEvent);
-// app.get
+// app.put("/user/createEvent", calendarCtrl.createEvent);
+app.get("user/calendarList", function() {
+    
+})
 
 app.post("/snapshots", yahooCtrl.savedStocksSnapshot);
 app.post("/addnewfavorite", stockCtrl.addNewFavorite);
